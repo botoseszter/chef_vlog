@@ -1,0 +1,28 @@
+<mat-card class="edit_recipe_card">
+  <form class="edit_recipe_form" [formGroup]="editRecipe" (ngSubmit)="onSubmit()">
+    <p>
+      <mat-form-field  class="full_width" appearance="fill">
+        <mat-label>Recept címe</mat-label>
+        <input matInput formControlName="name" required value="{{editRecipe.value?.name}}">
+      </mat-form-field>
+      <mat-form-field  class="full_width" appearance="fill">
+        <mat-label>Embed youtube videó link</mat-label>
+        <textarea matInput formControlName="link" required> {{editRecipe.value?.link}}</textarea>
+      </mat-form-field>
+      <mat-form-field class="full_width" appearance="fill">
+        <mat-label>Hozzávalók (egység;mértékegység;név)</mat-label>
+        <textarea placeholder=
+        "5;ek;liszt
+        4;ek;keményítő" matInput formControlName="ingredients">{{editRecipe.value?.ingredients}}</textarea>
+      </mat-form-field>
+      <mat-form-field class="full_width" appearance="fill">
+        <mat-label>Leírás</mat-label>
+        <textarea matInput formControlName="description"> {{ editRecipe.value?.description }}</textarea>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Recept szerkesztése</button>
+    </p>
+  </form>
+  <p *ngIf="edited == true">Szerkesztve</p>
+</mat-card>
+
+<!-- {{ ingredient['quantity'] }};{{ ingredient['type'] }};{{ ingredient['name'] }}  -->
