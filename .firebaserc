@@ -1,13 +1,4 @@
 {
-  "targets": {
-    "chef-vlog": {
-      "hosting": {
-        "chef-vlog": [
-          "chef-vlog"
-        ]
-      }
-    }
-  },
   "projects": {
     "default": "chef-vlog"
   }

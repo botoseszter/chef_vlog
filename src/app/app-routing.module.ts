@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: '', component: HomepageComponent},
   { path: 'recipe/create', component:AddRecipeComponent},
   { path: 'recipe/edit/:id', component: EditRecipeComponent},
+  { path: '*', component: HomepageComponent},
 
 ];
 
